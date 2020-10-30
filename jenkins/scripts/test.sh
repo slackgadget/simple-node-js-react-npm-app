@@ -1,8 +1,11 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
-echo ************** current TEST  path is *******************
+'echo ************** current TEST  path is *******************'
 echo $PATH
-echo *********************************************************
+'echo *********************************************************'
+PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/christopherwebster/springsource/apache-maven-3.0.4/bin:/usr/local/git/bin:/usr/local/bin/npm:/Users/christopherwebster/Dev/google-cloud-sdk/bin:
+node -v
+
 
 echo 'The following "npm" command (if executed) installs the "cross-env"'
 echo 'dependency into the local "node_modules" directory, which will ultimately'
