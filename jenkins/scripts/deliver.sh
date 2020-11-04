@@ -1,5 +1,7 @@
 #!/bin/sh
 
+PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/local/bin/npm:
+
 echo 'The following "npm" command builds your Node.js/React application for'
 echo 'production in the local "build" directory (i.e. within the'
 echo '"/var/jenkins_home/workspace/simple-node-js-react-app" directory),'
