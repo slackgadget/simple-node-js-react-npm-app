@@ -20,4 +20,4 @@ pwd
 docker image build . -t simple-node-js-react-app:LATEST
 
 #Run the image in the container expose Port 3000
-exec `docker run  -d -p 3000:3000/tcp --name=webster  simple-node-js-react-app:LATEST`
+docker run  -d -p 3000:3000/tcp --name=webster  simple-node-js-react-app:LATEST
