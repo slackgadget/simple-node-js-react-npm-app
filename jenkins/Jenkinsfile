@@ -19,10 +19,10 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh 'echo "delivery will take place here.."'
+                sh 'echo "Starting Delivery to local Docker.."'
                 sh './jenkins/scripts/deliver.sh'
 
-                sh 'echo "No delivery required"; exit 0'
+                sh 'echo "Delivery Complete."; exit 0'
             }
         }
     }
