@@ -28,7 +28,7 @@ const env = {};
     'OKTA_TESTING_DISABLEHTTPSCHECK'
 ].forEach((key) => {
     if (!process.env[key]) {
-        throw new Error(`Environment variable` [key] `must be set. See README.md`);
+        throw new Error(`Environment variable ${key} must be set. See README.md`);
     }
     env[key] = JSON.stringify(process.env[key]);
 });
