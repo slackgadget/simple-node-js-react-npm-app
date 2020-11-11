@@ -42,7 +42,7 @@ const Home = () => {
   return (
     <div>
       <div>
-        <Header as="h1">PKCE Flow w/ Okta Hosted Login Page</Header>
+        <Header as="h1">Accounting Hub Manager</Header>
 
         {authState.isAuthenticated && !userInfo
         && <div>Loading user information...</div>}
@@ -55,22 +55,6 @@ const Home = () => {
               {userInfo.name}
               !
             </p>
-            <p>
-              You have successfully authenticated against your Okta org
-              {' '}
-              <a href="/profile">My Profile </a>
-              {' '}
-              page to take a look inside the ID token.
-            </p>
-            <h3>Next Steps</h3>
-            <p>Currently this application is a stand-alone front end application. At this point you can use the access token to authenticate yourself against resource servers that you control.</p>
-            <p>This sample is designed to work with one of our resource server examples. To see access token authentication in action, please download one of these resource server examples:</p>
-            <p>
-              Once you have downloaded and started the example resource server, you can visit the
-              <a href="/messages">My Messages </a>
-              {' '}
-              page to see the authentication process in action.
-            </p>
           </div>
         )}
 
@@ -78,20 +62,11 @@ const Home = () => {
         && (
           <div>
             <p>
-              If you&lsquo;re viewing this page then you have successfully started this React application.
+              If you&lsquo;re viewing this page then you have successfully found the management console.
             </p>
             <p>
-              <span>This example shows you how to use the </span>
-              <a href="https://github.com/okta/okta-oidc-js/tree/master/packages/okta-react"> Okta React Library </a>
-              <span> to add the </span>
-              <a href="https://developer.okta.com/docs/guides/implement-auth-code-pkce">PKCE Flow </a>
-              <span> to your application.</span>
-            </p>
-            <p>
-              When you click the login button below, you will be redirected to the login page on your Okta
-              org.
-              After you authenticate, you will be returned to this application with an ID token and access
-              token. These tokens will be stored in local storage and can be retrieved at a later time.
+              Click the login button below to continue. If you don't have a login then you can request access at
+              <a href="http://www.infermata.com/access">Admin </a>
             </p>
             <Button id="login-button" primary onClick={login}>Login</Button>
           </div>

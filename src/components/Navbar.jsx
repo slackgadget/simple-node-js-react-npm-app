@@ -25,9 +25,9 @@ const Navbar = () => {
       <Menu fixed="top" inverted>
         <Container>
           <Menu.Item as="a" header href="/">
-            <Image size="mini" src="/react.svg" />
+            <Image size="mini" src="../react.svg" />
             &nbsp;
-            Okta-React Sample Project
+            Aptitude Management Console
           </Menu.Item>
           {authState.isAuthenticated && (
             <Menu.Item id="messages-button" as="a" href="/messages">
