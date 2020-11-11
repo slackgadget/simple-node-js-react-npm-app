@@ -66,7 +66,7 @@ const Profile = () => {
             </tr>
           </thead>
           <tbody>
-          {Object.entries(userInfo).map((claimEntry) => {
+            {Object.entries(userInfo).map((claimEntry) => {
             const claimName = claimEntry[0];
             const claimValue = claimEntry[1];
             const claimId = `claim-${claimName}`;

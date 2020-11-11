@@ -74,21 +74,26 @@ const Home = () => {
               {resourceServerExamples.map((example) => <li key={example.url}><a
                 href={example.url}>{example.label}</a></li>)}
             </ul>
-            <p> Once you have downloaded and started the example resource server, you can visit the <a href="/messages">My Messages</a> {' '} page to see the authentication process in action. </p>
+            <p>
+              Once you have downloaded and started the example resource server, you can visit the
+              <a href="/messages">My Messages </a>
+              {' '}
+              page to see the authentication process in action.
+            </p>
           </div>
         )}
 
         {!authState.isAuthenticated
         && (
           <div>
-            <p>If you&lsquo;re viewing this page then you have successfully started this React
-              application.</p>
+            <p>
+              If you&lsquo;re viewing this page then you have successfully started this React application.
+            </p>
             <p>
               <span>This example shows you how to use the </span>
-              <a href="https://github.com/okta/okta-oidc-js/tree/master/packages/okta-react">Okta React
-                Library</a>
+              <a href="https://github.com/okta/okta-oidc-js/tree/master/packages/okta-react"> Okta React Library </a>
               <span> to add the </span>
-              <a href="https://developer.okta.com/docs/guides/implement-auth-code-pkce">PKCE Flow</a>
+              <a href="https://developer.okta.com/docs/guides/implement-auth-code-pkce">PKCE Flow </a>
               <span> to your application.</span>
             </p>
             <p>

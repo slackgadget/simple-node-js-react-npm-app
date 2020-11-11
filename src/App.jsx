@@ -11,12 +11,12 @@ import Profile from './components/Profile';
 const App = () => (
   <Router>
     <Security {...config.oidc}>
-      <Navbar/>
+      <Navbar />
       <Container text style={{ marginTop: '7em' }}>
-        <Route path="/" exact component={Home}/>
-        <Route path="/login/callback" component={LoginCallback}/>
-        <SecureRoute path="/messages" component={Messages}/>
-        <SecureRoute path="/profile" component={Profile}/>
+        <Route path="/" exact component={Home} />
+        <Route path="/login/callback" component={LoginCallback} />
+        <SecureRoute path="/messages" component={Messages} />
+        <SecureRoute path="/profile" component={Profile} />
       </Container>
     </Security>
   </Router>
