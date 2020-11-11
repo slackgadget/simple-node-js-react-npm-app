@@ -9,16 +9,16 @@ import Navbar from './components/Navbar';
 import Profile from './components/Profile';
 
 const App = () => (
-    <Router>
-        <Security {...config.oidc}>
-            <Navbar/>
-            <Container text style={{marginTop: '7em'}}>
-                <Route path="/" exact component={Home}/>
-                <Route path="/login/callback" component={LoginCallback}/>
-                <SecureRoute path="/messages" component={Messages}/>
-                <SecureRoute path="/profile" component={Profile}/>
-            </Container>
-        </Security>
-    </Router>
+  <Router>
+    <Security {...config.oidc}>
+      <Navbar/>
+      <Container text style={{marginTop: '7em'}}>
+        <Route path="/" exact component={Home}/>
+        <Route path="/login/callback" component={LoginCallback}/>
+        <SecureRoute path="/messages" component={Messages}/>
+        <SecureRoute path="/profile" component={Profile}/>
+      </Container>
+    </Security>
+  </Router>
 );
 export default App;
