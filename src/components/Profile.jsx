@@ -71,10 +71,10 @@ const Profile = () => {
               const claimValue = claimEntry[1];
               const claimId = `claim-${claimName}`;
               return (
-              <tr key={claimName}>
-                <td>{claimName}</td>
-                <td id={claimId}>{claimValue}</td>
-              </tr>
+                <tr key={claimName}>
+                  <td>{claimName}</td>
+                  <td id={claimId}>{claimValue}</td>
+                </tr>
               );
             })}
           </tbody>
