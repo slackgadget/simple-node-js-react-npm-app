@@ -32,7 +32,7 @@ const Home = () => {
   const login = async () => {
     authService.login('/');
   };
-  
+
   if (authState.isPending) {
     return (
       <div>Loading...</div>
