@@ -68,11 +68,11 @@ const Messages = () => {
   return (
     <div>
       <Header as="h1">
-        <Icon name="mail outline"/>
+        <Icon name="mail outline" />
         My Messages
       </Header>
-      {messageFetchFailed &&
-      <Message error header="Failed to fetch messages.  Please verify the following:" list={possibleErrors}/>}
+      {messageFetchFailed
+      && <Message error header="Failed to fetch messages.  Please verify the following:" list={possibleErrors}/> }
       {!messages && !messageFetchFailed && <p>Fetching Messages..</p>}
       {messages
       && (
@@ -105,13 +105,13 @@ const Messages = () => {
           </p>
           <Table>
             <thead>
-            <tr>
-              <th>Date</th>
-              <th>Message</th>
-            </tr>
+              <tr>
+                <th>Date</th>
+                <th>Message</th>
+              </tr>
             </thead>
             <tbody>
-            {messages.map((message) => (
+              {messages.map((message) => (
               <tr id={message.id} key={message.id}>
                 <td>{message.date}</td>
                 <td>{message.text}</td>
