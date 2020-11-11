@@ -24,7 +24,7 @@ function registerValidSW(swUrl) {
     .then((registration) => {
       registration.onupdatefound = () => {
         const installingWorker = registration.installing;
-        installingWorker.onstatechange = () => {
+        /*installingWorker.onstatechange = () => {
           if (installingWorker.state === 'installed') {
             if (navigator.serviceWorker.controller) {
               // At this point, the old content will have been purged and
@@ -39,11 +39,11 @@ function registerValidSW(swUrl) {
               Console.log('Content is cached for offline use.');
             }
           }
-        };
+        };*/
       };
     })
     .catch((error) => {
-      Console.log('Error during service worker registration:');
+      //Console.log('Error during service worker registration:');
     });
 }
 
@@ -68,11 +68,9 @@ function checkValidServiceWorker(swUrl) {
       }
     })
     .catch(() => {
-      Console.log(
+      /*Console.log(
         'No internet connection found. App is running in offline mode.',
-      );
-
-
+      );*/
     });
 }
 
