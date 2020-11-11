@@ -10,21 +10,21 @@
  * See the License for the specific language governing permissions and limitations under the License.
  */
 
-import {useOktaAuth} from '@okta/okta-react';
-import React, {useState, useEffect} from 'react';
-import {Header, Icon, Message, Table} from 'semantic-ui-react';
+import { useOktaAuth } from '@okta/okta-react';
+import React, { useState, useEffect } from 'react';
+import { Header, Icon, Message, Table } from 'semantic-ui-react';
 
 import config from './config';
 
 const Messages = () => {
-  const {authState} = useOktaAuth();
+  const { authState } = useOktaAuth();
   const [messages, setMessages] = useState(null);
   const [messageFetchFailed, setMessageFetchFailed] = useState(false);
 
   // fetch messages
   useEffect(() => {
     if (authState.isAuthenticated) {
-      const {accessToken} = authState;
+      const { accessToken } = authState;
       fetch(config.resourceServer.messagesUrl, {
         headers: {
           Authorization: `Bearer ${accessToken}`,

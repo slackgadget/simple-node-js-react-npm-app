@@ -1,7 +1,7 @@
 import React from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
-import {Security, SecureRoute, LoginCallback} from '@okta/okta-react';
-import {Container} from 'semantic-ui-react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Security, SecureRoute, LoginCallback } from '@okta/okta-react';
+import { Container } from 'semantic-ui-react';
 import config from './components/config';
 import Home from './Home';
 import Messages from './components/Messages';
@@ -12,7 +12,7 @@ const App = () => (
   <Router>
     <Security {...config.oidc}>
       <Navbar/>
-      <Container text style={{marginTop: '7em'}}>
+      <Container text style={{ marginTop: '7em' }}>
         <Route path="/" exact component={Home}/>
         <Route path="/login/callback" component={LoginCallback}/>
         <SecureRoute path="/messages" component={Messages}/>

@@ -10,12 +10,12 @@
  * See the License for the specific language governing permissions and limitations under the License.
  */
 
-import {useOktaAuth} from '@okta/okta-react';
+import { useOktaAuth } from '@okta/okta-react';
 import React from 'react';
-import {Container, Icon, Image, Menu} from 'semantic-ui-react';
+import { Container, Icon, Image, Menu } from 'semantic-ui-react';
 
 const Navbar = () => {
-  const {authState, authService} = useOktaAuth();
+  const { authState, authService } = useOktaAuth();
 
   const login = async () => authService.login('/');
   const logout = async () => authService.logout('/');

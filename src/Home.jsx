@@ -10,12 +10,12 @@
  * See the License for the specific language governing permissions and limitations under the License.
  */
 
-import {useOktaAuth} from '@okta/okta-react';
-import React, {useState, useEffect} from 'react';
-import {Button, Header} from 'semantic-ui-react';
+import { useOktaAuth } from '@okta/okta-react';
+import React, { useState, useEffect } from 'react';
+import { Button, Header } from 'semantic-ui-react';
 
 const Home = () => {
-  const {authState, authService} = useOktaAuth();
+  const { authState, authService } = useOktaAuth();
   const [userInfo, setUserInfo] = useState(null);
 
   useEffect(() => {

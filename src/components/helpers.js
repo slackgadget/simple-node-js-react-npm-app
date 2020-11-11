@@ -19,12 +19,12 @@ async function checkAuthentication() {
   if (authenticated !== this.state.authenticated) {
     if (authenticated && !this.state.userinfo) {
       const userinfo = await this.props.auth.getUser();
-      this.setState({authenticated, userinfo});
+      this.setState({ authenticated, userinfo });
     } else {
-      this.setState({authenticated});
+      this.setState({ authenticated });
     }
   }
 }
 
 /* eslint-disable import/prefer-default-export */
-export {checkAuthentication};
+export { checkAuthentication };
