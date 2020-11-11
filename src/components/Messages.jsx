@@ -72,7 +72,7 @@ const Messages = () => {
         My Messages
       </Header>
       {messageFetchFailed
-      && <Message error header="Failed to fetch messages.  Please verify the following:" list={possibleErrors}/> }
+      && <Message error header="Failed to fetch messages.  Please verify the following:" list={possibleErrors} /> }
       {!messages && !messageFetchFailed && <p>Fetching Messages..</p>}
       {messages
       && (
@@ -112,11 +112,11 @@ const Messages = () => {
             </thead>
             <tbody>
               {messages.map((message) => (
-              <tr id={message.id} key={message.id}>
-                <td>{message.date}</td>
-                <td>{message.text}</td>
-              </tr>
-            ))}
+                <tr id={message.id} key={message.id}>
+                  <td>{message.date}</td>
+                  <td>{message.text}</td>
+                </tr>
+              ))}
             </tbody>
           </Table>
         </div>
