@@ -4,6 +4,8 @@ pipeline {
 
     environment {
         CI = 'true'
+        CLIENT_ID=0oams1il08SC8D5UX5d5
+        ISSUER=https://dev-9213540.okta.com/oauth2/default
     }
     stages {
         stage('Build') {
