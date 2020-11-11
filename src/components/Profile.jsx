@@ -67,16 +67,16 @@ const Profile = () => {
           </thead>
           <tbody>
             {Object.entries(userInfo).map((claimEntry) => {
-            const claimName = claimEntry[0];
-            const claimValue = claimEntry[1];
-            const claimId = `claim-${claimName}`;
-            return (
+              const claimName = claimEntry[0];
+              const claimValue = claimEntry[1];
+              const claimId = `claim-${claimName}`;
+              return (
               <tr key={claimName}>
                 <td>{claimName}</td>
                 <td id={claimId}>{claimValue}</td>
               </tr>
-            );
-          })}
+              );
+            })}
           </tbody>
         </Table>
       </div>
