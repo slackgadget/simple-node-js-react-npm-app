@@ -65,7 +65,7 @@ const Home = () => {
               If you&lsquo;re viewing this page then you have successfully found the management console.
             </p>
             <p>
-              Click the login button below to continue. If you don't have a login then you can request access at
+              Click the login button below to continue. If you don&lsquo;t have a login then you can request access at
               <a href="http://www.infermata.com/access">Admin </a>
             </p>
             <Button id="login-button" primary onClick={login}>Login</Button>
