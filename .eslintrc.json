@@ -23,6 +23,7 @@
         "consistent": true
       }
     ],
-    "react/jsx-props-no-spreading": "off"
+    "react/jsx-props-no-spreading": "off",
+    "no-param-reassign": [2, {"props": true}]
   }
 }
