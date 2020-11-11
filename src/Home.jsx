@@ -66,7 +66,12 @@ const Home = () => {
               {userInfo.name}
               !
             </p>
-            <p>You have successfully authenticated against your Okta org, and have been redirected back to this application. You now have an ID token and access token in local storage. Visit the{' '} <a href="/profile">My Profile</a> {' '} page to take a look inside the ID token.</p>
+            <p>You have successfully authenticated against your Okta org, and have been redirected back to this application. You now have an ID token and access token in local storage. Visit the
+              {' '}
+              <a href="/profile">My Profile </a>
+              {' '}
+              page to take a look inside the ID token.
+            </p>
             <h3>Next Steps</h3>
             <p>Currently this application is a stand-alone front end application. At this point you can use the access token to authenticate yourself against resource servers that you control.</p>
             <p>This sample is designed to work with one of our resource server examples. To see access token authentication in action, please download one of these resource server examples:</p>
