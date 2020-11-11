@@ -41,7 +41,7 @@ const Profile = () => {
     <div>
       <div>
         <Header as="h1">
-          <Icon name="drivers license outline"/>
+          <Icon name="drivers license outline" />
           {' '}
           My User Profile (ID Token Claims)
           {' '}
@@ -60,10 +60,10 @@ const Profile = () => {
         </p>
         <Table>
           <thead>
-          <tr>
-            <th>Claim</th>
-            <th>Value</th>
-          </tr>
+            <tr>
+              <th>Claim</th>
+              <th>Value</th>
+            </tr>
           </thead>
           <tbody>
           {Object.entries(userInfo).map((claimEntry) => {
