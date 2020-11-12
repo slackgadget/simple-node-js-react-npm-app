@@ -25,7 +25,7 @@ const Navbar = () => {
       <Menu fixed="top" inverted>
         <Container>
           <Menu.Item as="a" header href="/">
-            <Image size="mini" src="../../public/react.svg" />
+            <Image size="mini" src={require('../../public/react.svg')} />
             &nbsp;
             Aptitude Management Console
           </Menu.Item>
