@@ -55,26 +55,26 @@ const Profile = () => {
             </tr>
           </thead>
           <tbody>
-          <tr>
-            <td>Name</td>
-            <td>{userInfo.name}</td>
-          </tr>
-          <tr>
-            <td>Given Name</td>
-            <td>{userInfo.given_name}</td>
-          </tr>
-          <tr>
-            <td>Family Name</td>
-            <td>{userInfo.family_name}</td>
-          </tr>
-          <tr>
-            <td>email</td>
-            <td>{userInfo.email}</td>
-          </tr>
-          <tr>
-            <td>User Name</td>
-            <td>{userInfo.preferred_username}</td>
-          </tr>
+            <tr>
+              <td>Name</td>
+              <td>{userInfo.name}</td>
+            </tr>
+            <tr>
+              <td>Given Name</td>
+              <td>{userInfo.given_name}</td>
+            </tr>
+            <tr>
+              <td>Family Name</td>
+              <td>{userInfo.family_name}</td>
+            </tr>
+            <tr>
+              <td>email</td>
+              <td>{userInfo.email}</td>
+            </tr>
+            <tr>
+              <td>User Name</td>
+              <td>{userInfo.preferred_username}</td>
+            </tr>
             {Object.entries(userInfo).map((claimEntry) => {
               const claimName = claimEntry[0];
               const claimValue = claimEntry[1];
