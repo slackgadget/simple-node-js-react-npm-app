@@ -68,24 +68,21 @@ const Profile = () => {
               <td>{userInfo.family_name}</td>
             </tr>
             <tr>
-              <td>email</td>
+              <td>eMail</td>
               <td>{userInfo.email}</td>
             </tr>
             <tr>
               <td>User Name</td>
               <td>{userInfo.preferred_username}</td>
             </tr>
-            {Object.entries(userInfo).map((claimEntry) => {
-              const claimName = claimEntry[0];
-              const claimValue = claimEntry[1];
-              const claimId = `claim-${claimName}`;
-              return (
-                <tr key={claimName}>
-                  <td>{claimName}</td>
-                  <td id={claimId}>{claimValue}</td>
-                </tr>
-              );
-            })}
+            <tr>
+              <td>Locale</td>
+              <td>{userInfo.locale}</td>
+            </tr>
+            <tr>
+              <td>Zone Info</td>
+              <td>{userInfo.zoneinfo}</td>
+            </tr>
           </tbody>
         </Table>
       </div>
