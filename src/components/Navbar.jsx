@@ -19,7 +19,7 @@ const Navbar = () => {
 
   const login = async () => authService.login('/');
   const logout = async () => authService.logout('/');
-  const logo = './components/react.svg';
+  const logo = '/react.svg';
 
   return (
     <div>
