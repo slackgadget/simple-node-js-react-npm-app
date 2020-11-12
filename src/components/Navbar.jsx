@@ -27,7 +27,7 @@ const Navbar = () => {
           <Menu.Item as="a" header href="/">
             <Image size="mini" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/120px-React-icon.svg.png" />
             &nbsp;
-            Aptitude Management Console
+            Accounting Management Console
           </Menu.Item>
           {authState.isAuthenticated && (
             <Menu.Item id="messages-button" as="a" href="/messages">
