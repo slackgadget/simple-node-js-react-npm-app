@@ -19,13 +19,14 @@ const Navbar = () => {
 
   const login = async () => authService.login('/');
   const logout = async () => authService.logout('/');
+  const logo = './components/react.svg'
 
   return (
     <div>
       <Menu fixed="top" inverted>
         <Container>
           <Menu.Item as="a" header href="/">
-            <img src={require("./react.svg")} />
+            <Image size="mini" src={logo} />
             &nbsp;
             Aptitude Management Console
           </Menu.Item>
