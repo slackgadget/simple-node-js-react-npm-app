@@ -12,8 +12,8 @@
 
 import { useOktaAuth } from '@okta/okta-react';
 import React from 'react';
-import { Container, Icon, Image, Menu } from 'semantic-ui-react';
-import logo from 'react.svg';
+import { Container, Icon, Menu } from 'semantic-ui-react';
+import {ReactComponent as Logo} from './react.svg';
 
 const Navbar = () => {
   const { authState, authService } = useOktaAuth();
@@ -26,7 +26,7 @@ const Navbar = () => {
       <Menu fixed="top" inverted>
         <Container>
           <Menu.Item as="a" header href="/">
-            <Image size="mini" src={ logo } />
+            <Logo />
             &nbsp;
             Aptitude Management Console
           </Menu.Item>
