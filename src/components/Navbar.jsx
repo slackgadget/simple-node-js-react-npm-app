@@ -14,7 +14,6 @@ import { useOktaAuth } from '@okta/okta-react';
 import React from 'react';
 import { Container, Icon, Image, Menu } from 'semantic-ui-react';
 
-
 const Navbar = () => {
   const { authState, authService } = useOktaAuth();
 
