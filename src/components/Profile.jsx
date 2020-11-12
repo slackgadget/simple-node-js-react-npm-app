@@ -43,7 +43,7 @@ const Profile = () => {
         <Header as="h1">
           <Icon name="drivers license outline" />
           {' '}
-          My User Profile
+          My User Profile&nbsp;
           {userInfo.name}
           {' '}
         </Header>
