@@ -13,7 +13,7 @@
 import { useOktaAuth } from '@okta/okta-react';
 import React from 'react';
 import { Container, Icon, Menu } from 'semantic-ui-react';
-import {ReactComponent as Logo} from './react.svg';
+import { ReactComponent as Logo } from './react.svg';
 
 const Navbar = () => {
   const { authState, authService } = useOktaAuth();
