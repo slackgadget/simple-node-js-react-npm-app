@@ -17,6 +17,7 @@ const App = () => (
         <Route path="/login/callback" component={LoginCallback} />
         <SecureRoute path="/messages" component={Messages} />
         <SecureRoute path="/profile" component={Profile} />
+        <SecureRoute path="/crossvals" component={CrossVals} />
       </Container>
     </Security>
   </Router>
