@@ -11,6 +11,7 @@ const CrossVals = () => {
         response = await response.json();
         setCrossValInfo(response);
       } catch (e) {
+        // eslint-disable-next-line no-console
         console.error(e.message);
       }
     }
