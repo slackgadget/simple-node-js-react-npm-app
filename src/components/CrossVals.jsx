@@ -15,33 +15,32 @@ const CrossVals = () => {
     fetchData();
   });
 
-}
+  if (!crossValInfo) {
+    return (
+      <div>
+        <p>Fetching cross validation rule data....</p>
+      </div>
+    );
+  }
 
-if (!crossValInfo) {
   return (
     <div>
-      <p>Fetching cross validation rule data....</p>
+      <div>
+        <Header as="h1">
+          <Icon name="drivers license outline" />
+          {' '}
+          Cross Validation Rules:&nbsp;
+          {' '}
+        </Header>
+
+      </div>
+      <ul>
+        {crossValInfo.map((crossVal) => (
+          <li key={crossVal.comboRuleset}>{crossVal.checkColumn}</li>
+        ))}
+      </ul>
     </div>
   );
-}
-
-return (
-  <div>
-    <div>
-      <Header as="h1">
-        <Icon name="drivers license outline" />
-        {' '}
-        Cross Validation Rules:&nbsp;
-        {' '}
-      </Header>
-
-    </div>
-    <ul>
-      {crossValInfo.map((crossVal) => (
-        <li key={crossVal.comboRuleset}>{crossVal.checkColumn}</li>
-      ))}
-    </ul>
-  </div>
-);
+};
 
 export default CrossVals;
