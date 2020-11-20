@@ -35,6 +35,11 @@ const Navbar = () => {
               Messages
             </Menu.Item>
           )}
+          {authState.isAuthenticated && (
+            <Menu.Item id="xvals-button" as="a" href="/crossvals">
+              View X Val Rules
+            </Menu.Item>
+          )}
           {authState.isAuthenticated
           && <Menu.Item id="profile-button" as="a" href="/profile">Profile</Menu.Item>}
           {authState.isAuthenticated
