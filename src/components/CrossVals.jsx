@@ -17,7 +17,7 @@ const CrossVals = () => {
     }
 
     fetchCrossVals();
-  }, []);
+  }, [crossValInfo, setCrossValInfo]);
 
   if (!crossValInfo) {
     return (
@@ -36,11 +36,8 @@ const CrossVals = () => {
           Cross Validation Rules:&nbsp;
           {' '}
         </Header>
-
       </div>
-      {crossValInfo((crossVal) => (
-        <div>{JSON.stringify(crossVal)}</div>
-      ))}
+        <div>{JSON.stringify(crossValInfo)}</div>
     </div>
   );
 };
