@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { Header, Icon, Table } from 'semantic-ui-react';
+import { Header, Icon } from 'semantic-ui-react';
 
 const CrossVals = () => {
   const [crossValInfo, setCrossValInfo] = useState(null);
 
   useEffect(() => {
-    async function fetchData(){
-      const res = await fetch("http://localhost:8989/crossvals");
-
-      const json = await res.json();
-      setCrossValInfo(json.data.children.map(c => c.data));
+    async function fetchCrossVals() {
+      let response = await fetch('http://localhost:8989/crossvals');
+      response = await response.json()
+      setCrossValInfo(response)
     }
 
-    fetchData();
-  });
+    fetchCrossVals()
+  }, []);
+
+
 
   if (!crossValInfo) {
     return (
@@ -39,6 +40,7 @@ const CrossVals = () => {
           <li key={crossVal.comboRuleset}>{crossVal.checkColumn}</li>
         ))}
       </ul>
+      <div>{JSON.stringify(crossVal)}</div>
     </div>
   );
 };
