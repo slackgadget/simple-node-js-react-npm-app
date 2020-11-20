@@ -7,14 +7,12 @@ const CrossVals = () => {
   useEffect(() => {
     async function fetchCrossVals() {
       let response = await fetch('http://localhost:8989/crossvals');
-      response = await response.json()
-      setCrossValInfo(response)
+      response = await response.json();
+      setCrossValInfo(response);
     }
 
-    fetchCrossVals()
+    fetchCrossVals();
   }, []);
-
-
 
   if (!crossValInfo) {
     return (
@@ -40,7 +38,9 @@ const CrossVals = () => {
           <li key={crossVal.comboRuleset}>{crossVal.checkColumn}</li>
         ))}
       </ul>
-      <div>{JSON.stringify(crossVal)}</div>
+      {crossValInfo.map((crossVal) => (
+        <div>{JSON.stringify(crossVal)}</div>
+      ))}
     </div>
   );
 };
