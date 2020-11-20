@@ -7,6 +7,7 @@ import Home from './Home';
 import Messages from './components/Messages';
 import Navbar from './components/Navbar';
 import Profile from './components/Profile';
+import CrossVals from './components/CrossVals';
 
 const App = () => (
   <Router>
