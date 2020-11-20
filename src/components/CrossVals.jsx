@@ -37,7 +37,7 @@ const CrossVals = () => {
           {' '}
         </Header>
       </div>
-        <div>{JSON.stringify(crossValInfo)}</div>
+      <div>{JSON.stringify(crossValInfo)}</div>
     </div>
   );
 };
