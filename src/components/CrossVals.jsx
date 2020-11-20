@@ -37,11 +37,6 @@ const CrossVals = () => {
         </Header>
 
       </div>
-      <!--<ul>
-        {crossValInfo((crossVal) => (
-          <li key={crossVal.comboRuleset}>{crossVal.checkColumn}</li>
-        ))}
-      </ul> -->
       {crossValInfo((crossVal) => (
         <div>{JSON.stringify(crossVal)}</div>
       ))}
