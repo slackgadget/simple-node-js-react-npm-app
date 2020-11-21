@@ -9,7 +9,7 @@ const CrossVals = () => {
       try {
         let response = await fetch('http://localhost:8989/crossvals');
         response = await response.json();
-        setCrossValInfo(response.children.map(it => {it.data}));
+        setCrossValInfo(response);
       } catch (e) {
         // eslint-disable-next-line no-console
         console.error(e.message);
@@ -36,6 +36,11 @@ const CrossVals = () => {
           Cross Validation Rules:&nbsp;
           {' '}
         </Header>
+      </div>
+      <div>
+        <ul>
+          {crossValInfo.crossvals.map(s => (<li>{ s.errDesc }</li>))}
+        </ul>
       </div>
       <div>{JSON.stringify(crossValInfo)}</div>
     </div>
