@@ -39,7 +39,7 @@ const CrossVals = () => {
       </div>
       <div>
         <ul>
-          {crossValInfo.crossvals.map(s => (<li>{ s.errDesc }</li>))}
+          {crossValInfo.crossvals.map((s) => (<li>{ s.errDesc }</li>))}
         </ul>
       </div>
       <div>{JSON.stringify(crossValInfo)}</div>
