@@ -9,7 +9,7 @@ const CrossVals = () => {
       try {
         let response = await fetch('http://localhost:8989/crossvals');
         response = await response.json();
-        setCrossValInfo(response.children.map(it => it.data));
+        setCrossValInfo(response.children.map(it => {it.data}));
       } catch (e) {
         // eslint-disable-next-line no-console
         console.error(e.message);
