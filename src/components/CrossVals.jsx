@@ -38,13 +38,13 @@ const CrossVals = () => {
           Cross Validation Rules
           {' '}
         </Header>
-        <p>&nbsp</p>
+        <p>&nbsp;</p>
       </div>
       <div>
-        <Table fixed>
+        <Table fixed compact striped>
           <Table.Header>
             <Table.Row>
-              <Table.HeaderCell>Id</Table.HeaderCell>
+              <Table.HeaderCell width={10}>Id</Table.HeaderCell>
               <Table.HeaderCell>Combo Ruleset</Table.HeaderCell>
               <Table.HeaderCell>Account Label</Table.HeaderCell>
               <Table.HeaderCell>Check Column</Table.HeaderCell>
@@ -71,7 +71,7 @@ const CrossVals = () => {
           </Table.Body>
           <Table.Footer>
             <Table.Row>
-              <Table.HeaderCell colSpan="3">
+              <Table.HeaderCell colSpan="7">
                 <Menu floated="right" pagination>
                   <Menu.Item as="a" icon>
                     <Icon name="chevron left" />
