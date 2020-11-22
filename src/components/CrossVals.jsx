@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Header, Icon, Menu, Table} from 'semantic-ui-react';
+import { Header, Icon, Menu, Table } from 'semantic-ui-react';
 
 const CrossVals = () => {
   const [crossValInfo, setCrossValInfo] = useState(null);
@@ -42,16 +42,16 @@ const CrossVals = () => {
       <div>
         <Table celled>
           <Table.Header>
-          <Table.Row>
-            <Table.HeaderCell>Id</Table.HeaderCell>
-            <Table.HeaderCell>Combo Ruleset</Table.HeaderCell>
-            <Table.HeaderCell>Account Label</Table.HeaderCell>
-            <Table.HeaderCell>Check Column</Table.HeaderCell>
-            <Table.HeaderCell>Match Criteria</Table.HeaderCell>
-            <Table.HeaderCell>Check Value</Table.HeaderCell>
-            <Table.HeaderCell>Match Value</Table.HeaderCell>
-            <Table.HeaderCell>Account Range</Table.HeaderCell>
-          </Table.Row>
+            <Table.Row>
+              <Table.HeaderCell>Id</Table.HeaderCell>
+              <Table.HeaderCell>Combo Ruleset</Table.HeaderCell>
+              <Table.HeaderCell>Account Label</Table.HeaderCell>
+              <Table.HeaderCell>Check Column</Table.HeaderCell>
+              <Table.HeaderCell>Match Criteria</Table.HeaderCell>
+              <Table.HeaderCell>Check Value</Table.HeaderCell>
+              <Table.HeaderCell>Match Value</Table.HeaderCell>
+              <Table.HeaderCell>Account Range</Table.HeaderCell>
+            </Table.Row>
           </Table.Header>
           <Table.Body>
           {
@@ -72,13 +72,13 @@ const CrossVals = () => {
           </Table.Body>
           <Table.Footer>
             <Table.Row>
-              <Table.HeaderCell colSpan='3'>
-                <Menu floated='right' pagination>
-                  <Menu.Item as='a' icon>
-                    <Icon name='chevron left' />
+              <Table.HeaderCell colSpan="3">
+                <Menu floated="right" pagination>
+                  <Menu.Item as="a" icon>
+                    <Icon name="chevron left" />
                   </Menu.Item>
-                  <Menu.Item as='a' icon>
-                    <Icon name='chevron right' />
+                  <Menu.Item as="a" icon>
+                    <Icon name="chevron right" />
                   </Menu.Item>
                 </Menu>
               </Table.HeaderCell>
