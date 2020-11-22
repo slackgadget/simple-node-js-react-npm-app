@@ -42,14 +42,16 @@ const CrossVals = () => {
       <div>
         <table>
           <th>
-            <td>Id</td>
-            <td>Combo Ruleset</td>
-            <td>Account Label</td>
-            <td>Accoun Range</td>
-            <td>Check Column</td>
-            <td>Match Criteria</td>
-            <td>Check Value</td>
-            <td>Match Value</td>
+            <tr>
+              <td>Id</td>
+              <td>Combo Ruleset</td>
+              <td>Account Label</td>
+              <td>Accoun Range</td>
+              <td>Check Column</td>
+              <td>Match Criteria</td>
+              <td>Check Value</td>
+              <td>Match Value</td>
+            </tr>
           </th>
           {
             /* eslint no-underscore-dangle: ["error", { "allow": ["_embedded"] }] */
