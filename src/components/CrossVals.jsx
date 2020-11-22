@@ -45,11 +45,11 @@ const CrossVals = () => {
             <th>Id</th>
             <th>Combo Ruleset</th>
             <th>Account Label</th>
-            <th>Account Range</th>
             <th>Check Column</th>
             <th>Match Criteria</th>
             <th>Check Value</th>
             <th>Match Value</th>
+            <th>Account Range</th>
           </tr>
           {
             /* eslint no-underscore-dangle: ["error", { "allow": ["_embedded"] }] */
@@ -58,11 +58,11 @@ const CrossVals = () => {
                 <td>{crossVal.errDesc}</td>
                 <td>{crossVal.comboRuleset}</td>
                 <td>{crossVal.accountLabel}</td>
-                <td>{crossVal.accountRange}</td>
                 <td>{crossVal.checkColumn}</td>
                 <td>{crossVal.matchCriteria}</td>
                 <td>{crossVal.checkValue}</td>
                 <td>{crossVal.matchValue}</td>
+                <td>{crossVal.accountRange}</td>
               </tr>
             ))
           }
