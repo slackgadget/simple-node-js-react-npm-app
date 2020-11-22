@@ -46,7 +46,7 @@ const CrossVals = () => {
               <td>Id</td>
               <td>Combo Ruleset</td>
               <td>Account Label</td>
-              <td>Accoun Range</td>
+              <td>Account Range</td>
               <td>Check Column</td>
               <td>Match Criteria</td>
               <td>Check Value</td>
