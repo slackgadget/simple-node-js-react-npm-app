@@ -54,21 +54,21 @@ const CrossVals = () => {
             </Table.Row>
           </Table.Header>
           <Table.Body>
-          {
-            /* eslint no-underscore-dangle: ["error", { "allow": ["_embedded"] }] */
-            crossValInfo._embedded.crossvals.map((crossVal) => (
-              <Table.Row>
-                <Table.Cell>{crossVal.errDesc}</Table.Cell>
-                <Table.Cell>{crossVal.comboRuleset}</Table.Cell>
-                <Table.Cell>{crossVal.accountLabel}</Table.Cell>
-                <Table.Cell>{crossVal.checkColumn}</Table.Cell>
-                <Table.Cell>{crossVal.matchCriteria}</Table.Cell>
-                <Table.Cell>{crossVal.checkValue}</Table.Cell>
-                <Table.Cell>{crossVal.matchValue}</Table.Cell>
-                <Table.Cell>{crossVal.accountRange}</Table.Cell>
-              </Table.Row>
-            ))
-          }
+            {
+              /* eslint no-underscore-dangle: ["error", { "allow": ["_embedded"] }] */
+              crossValInfo._embedded.crossvals.map((crossVal) => (
+                <Table.Row>
+                  <Table.Cell>{crossVal.errDesc}</Table.Cell>
+                  <Table.Cell>{crossVal.comboRuleset}</Table.Cell>
+                  <Table.Cell>{crossVal.accountLabel}</Table.Cell>
+                  <Table.Cell>{crossVal.checkColumn}</Table.Cell>
+                  <Table.Cell>{crossVal.matchCriteria}</Table.Cell>
+                  <Table.Cell>{crossVal.checkValue}</Table.Cell>
+                  <Table.Cell>{crossVal.matchValue}</Table.Cell>
+                  <Table.Cell>{crossVal.accountRange}</Table.Cell>
+                </Table.Row>
+              ))
+            }
           </Table.Body>
           <Table.Footer>
             <Table.Row>
