@@ -44,7 +44,7 @@ const CrossVals = () => {
         <p>&nbsp;</p>
       </div>
       <div>
-        <Table fixed compact striped>
+        <Table compact striped>
           <Table.Header>
             <Table.Row>
               <Table.HeaderCell>Id</Table.HeaderCell>
