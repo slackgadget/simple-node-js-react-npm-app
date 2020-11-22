@@ -35,9 +35,10 @@ const CrossVals = () => {
         <Header as="h1">
           <Icon name="tasks" />
           {' '}
-          Cross Validation Rules:&nbsp;
+          Cross Validation Rules&nbsp;
           {' '}
         </Header>
+        <p>&nbsp</p>
       </div>
       <div>
         <Table celled>
@@ -50,7 +51,6 @@ const CrossVals = () => {
               <Table.HeaderCell>Match Criteria</Table.HeaderCell>
               <Table.HeaderCell>Check Value</Table.HeaderCell>
               <Table.HeaderCell>Match Value</Table.HeaderCell>
-              <Table.HeaderCell>Account Range</Table.HeaderCell>
             </Table.Row>
           </Table.Header>
           <Table.Body>
@@ -65,7 +65,6 @@ const CrossVals = () => {
                   <Table.Cell>{crossVal.matchCriteria}</Table.Cell>
                   <Table.Cell>{crossVal.checkValue}</Table.Cell>
                   <Table.Cell>{crossVal.matchValue}</Table.Cell>
-                  <Table.Cell>{crossVal.accountRange}</Table.Cell>
                 </Table.Row>
               ))
             }
