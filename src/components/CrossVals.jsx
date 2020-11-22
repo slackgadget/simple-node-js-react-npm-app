@@ -35,13 +35,13 @@ const CrossVals = () => {
         <Header as="h1">
           <Icon name="tasks" />
           {' '}
-          Cross Validation Rules&nbsp;
+          Cross Validation Rules
           {' '}
         </Header>
         <p>&nbsp</p>
       </div>
       <div>
-        <Table celled>
+        <Table fixed>
           <Table.Header>
             <Table.Row>
               <Table.HeaderCell>Id</Table.HeaderCell>
