@@ -41,20 +41,38 @@ const CrossVals = () => {
       </div>
       <div>
         <ol>
-          {
-          /* eslint no-underscore-dangle: ["error", { "allow": ["_embedded"] }] */
-          crossValInfo._embedded.crossvals.map((crossVal) => (
-            <li key={crossVal.errDesc} align="start">
-              <div>
-                <p>{crossVal.checkColumn}</p>
-                <p>{crossVal.checkValue}</p>
-              </div>
-            </li>
-          ))
-          }
+
         </ol>
       </div>
-      <div>{JSON.stringify(crossValInfo)}</div>
+      <div>
+        <table>
+          <th>
+            <td>Id</td>
+            <td>Combo Ruleset</td>
+            <td>Account Label</td>
+            <td>Accoun Range</td>
+            <td>Check Column</td>
+            <td>Match Criteria</td>
+            <td>Check Value</td>
+            <td>Match Value</td>
+        </th>
+          {
+            /* eslint no-underscore-dangle: ["error", { "allow": ["_embedded"] }] */
+            crossValInfo._embedded.crossvals.map((crossVal) => (
+              <tr>
+                <td>{crossVal.errDesc}</td>
+                <td>{crossVal.comboRuleset}</td>
+                <td>{crossVal.accountLabel}</td>
+                <td>{crossVal.accountRange}</td>
+                <td>{crossVal.checkColumn}</td>
+                <td>{crossVal.matchCriteria}</td>
+                <td>{crossVal.checkValue}</td>
+                <td>{crossVal.matchValue}</td>
+              </tr>
+            ))
+          }
+        </table>
+      </div>
     </div>
   );
 };
