@@ -42,7 +42,7 @@ const CrossVals = () => {
       <div>
         <ol>
           {
-          crossValInfo.map((crossVal) => (
+          crossValInfo.crossvals.map((crossVal) => (
             <li key={crossVal.errDesc} align="start">
               <div>
                 <p>{crossVal.checkColumn}</p>
