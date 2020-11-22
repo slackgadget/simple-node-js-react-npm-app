@@ -23,8 +23,11 @@ const CrossVals = () => {
 
   if (!crossValInfo) {
     return (
-      <div>
-        <p>Fetching cross validation rule data....</p>
+      <div class="ui segment">
+        <div class="ui active dimmer">
+          <div class="ui text loader">Loading</div>
+        </div>
+        <p></p>
       </div>
     );
   }
@@ -44,7 +47,7 @@ const CrossVals = () => {
         <Table fixed compact striped>
           <Table.Header>
             <Table.Row>
-              <Table.HeaderCell width={10}>Id</Table.HeaderCell>
+              <Table.HeaderCell width={1}>Id</Table.HeaderCell>
               <Table.HeaderCell>Combo Ruleset</Table.HeaderCell>
               <Table.HeaderCell>Account Label</Table.HeaderCell>
               <Table.HeaderCell>Check Column</Table.HeaderCell>
@@ -90,3 +93,4 @@ const CrossVals = () => {
 };
 
 export default CrossVals;
+
