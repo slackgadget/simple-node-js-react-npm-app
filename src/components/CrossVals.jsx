@@ -40,9 +40,14 @@ const CrossVals = () => {
         </Header>
       </div>
       <div>
-        <ul>
-          {crossValInfo.crossvals.errDesc}
-        </ul>
+        crossValInfo.map((crossVal) => (
+        <li key={crossVal.errDesc} align="start">
+          <div>
+            <p>{crossVal.checkColumn}</p>
+            <p>{crossVal.checkValue}</p>
+          </div>
+        </li>
+        ))
       </div>
       <div>{JSON.stringify(crossValInfo)}</div>
     </div>
