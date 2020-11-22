@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Header, Icon, Menu, Table,Dimmer, Loader, Image, Segment } from 'semantic-ui-react';
+import { Header, Icon, Menu, Table, Dimmer, Loader, Image, Segment } from 'semantic-ui-react';
 
 const CrossVals = () => {
   const [crossValInfo, setCrossValInfo] = useState(null);
@@ -27,7 +27,7 @@ const CrossVals = () => {
         <Dimmer active>
           <Loader />
         </Dimmer>
-        <Image src='https://react.semantic-ui.com/images/wireframe/short-paragraph.png' />
+        <Image src="https://react.semantic-ui.com/images/wireframe/short-paragraph.png" />
       </Segment>
     );
   }
