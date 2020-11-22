@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Header, Icon, Menu, Table } from 'semantic-ui-react';
+import { Header, Icon, Menu, Table,Dimmer, Loader, Image, Segment } from 'semantic-ui-react';
 
 const CrossVals = () => {
   const [crossValInfo, setCrossValInfo] = useState(null);
@@ -23,12 +23,12 @@ const CrossVals = () => {
 
   if (!crossValInfo) {
     return (
-      <div class="ui segment">
-        <div class="ui active dimmer">
-          <div class="ui text loader">Loading</div>
-        </div>
-        <p></p>
-      </div>
+      <Segment>
+        <Dimmer active>
+          <Loader />
+        </Dimmer>
+        <Image src='https://react.semantic-ui.com/images/wireframe/short-paragraph.png' />
+      </Segment>
     );
   }
 
@@ -47,7 +47,7 @@ const CrossVals = () => {
         <Table fixed compact striped>
           <Table.Header>
             <Table.Row>
-              <Table.HeaderCell width={1}>Id</Table.HeaderCell>
+              <Table.HeaderCell>Id</Table.HeaderCell>
               <Table.HeaderCell>Combo Ruleset</Table.HeaderCell>
               <Table.HeaderCell>Account Label</Table.HeaderCell>
               <Table.HeaderCell>Check Column</Table.HeaderCell>
@@ -93,4 +93,3 @@ const CrossVals = () => {
 };
 
 export default CrossVals;
-
