@@ -40,11 +40,6 @@ const CrossVals = () => {
         </Header>
       </div>
       <div>
-        <ol>
-
-        </ol>
-      </div>
-      <div>
         <table>
           <th>
             <td>Id</td>
@@ -55,7 +50,7 @@ const CrossVals = () => {
             <td>Match Criteria</td>
             <td>Check Value</td>
             <td>Match Value</td>
-        </th>
+          </th>
           {
             /* eslint no-underscore-dangle: ["error", { "allow": ["_embedded"] }] */
             crossValInfo._embedded.crossvals.map((crossVal) => (
