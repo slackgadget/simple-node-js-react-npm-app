@@ -42,7 +42,7 @@ const CrossVals = () => {
       <div>
         <ol>
           {
-          /* eslint no-underscore-dangle: allow */
+          /* eslint no-underscore-dangle: ["error", { "allow": ["_embedded"] }] */
           crossValInfo._embedded.crossvals.map((crossVal) => (
             <li key={crossVal.errDesc} align="start">
               <div>
