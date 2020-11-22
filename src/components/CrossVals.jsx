@@ -41,18 +41,16 @@ const CrossVals = () => {
       </div>
       <div>
         <table>
-          <th>
-            <tr>
-              <td>Id</td>
-              <td>Combo Ruleset</td>
-              <td>Account Label</td>
-              <td>Account Range</td>
-              <td>Check Column</td>
-              <td>Match Criteria</td>
-              <td>Check Value</td>
-              <td>Match Value</td>
-            </tr>
-          </th>
+          <tr>
+            <th>Id</th>
+            <th>Combo Ruleset</th>
+            <th>Account Label</th>
+            <th>Account Range</th>
+            <th>Check Column</th>
+            <th>Match Criteria</th>
+            <th>Check Value</th>
+            <th>Match Value</th>
+          </tr>
           {
             /* eslint no-underscore-dangle: ["error", { "allow": ["_embedded"] }] */
             crossValInfo._embedded.crossvals.map((crossVal) => (
