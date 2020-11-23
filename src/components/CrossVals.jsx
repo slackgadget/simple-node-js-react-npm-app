@@ -44,7 +44,7 @@ const CrossVals = () => {
         <p>&nbsp;</p>
       </div>
       <div style={{ width: '1000px', height: '500px' }}>
-        <Table compact striped >
+        <Table compact striped>
           <Table.Header>
             <Table.Row>
               <Table.HeaderCell>Id</Table.HeaderCell>
@@ -58,20 +58,20 @@ const CrossVals = () => {
           </Table.Header>
           <Table.Body>
             <div style={{ overflowX: 'scroll' }}>
-            {
-              /* eslint no-underscore-dangle: ["error", { "allow": ["_embedded"] }] */
-              crossValInfo._embedded.crossvals.map((crossVal) => (
-                <Table.Row>
-                  <Table.Cell>{crossVal.crossval}</Table.Cell>
-                  <Table.Cell>{crossVal.comboRuleset}</Table.Cell>
-                  <Table.Cell>{crossVal.accountLabel}</Table.Cell>
-                  <Table.Cell>{crossVal.checkColumn}</Table.Cell>
-                  <Table.Cell>{crossVal.matchCriteria}</Table.Cell>
-                  <Table.Cell>{crossVal.checkValue}</Table.Cell>
-                  <Table.Cell>{crossVal.matchValue}</Table.Cell>
-                </Table.Row>
-              ))
-            }
+              {
+                /* eslint no-underscore-dangle: ["error", { "allow": ["_embedded"] }] */
+                crossValInfo._embedded.crossvals.map((crossVal) => (
+                  <Table.Row>
+                    <Table.Cell>{crossVal.crossval}</Table.Cell>
+                    <Table.Cell>{crossVal.comboRuleset}</Table.Cell>
+                    <Table.Cell>{crossVal.accountLabel}</Table.Cell>
+                    <Table.Cell>{crossVal.checkColumn}</Table.Cell>
+                    <Table.Cell>{crossVal.matchCriteria}</Table.Cell>
+                    <Table.Cell>{crossVal.checkValue}</Table.Cell>
+                    <Table.Cell>{crossVal.matchValue}</Table.Cell>
+                  </Table.Row>
+                ))
+              }
             </div>
           </Table.Body>
           <Table.Footer>
