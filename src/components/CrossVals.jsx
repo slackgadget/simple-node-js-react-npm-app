@@ -76,11 +76,11 @@ const CrossVals = () => {
             <Table.Row>
               <Table.HeaderCell colSpan="7">
                 <Menu floated="left" pagination>
-                  <Menu.Item as="a" icon>
-                    <Icon name="chevron left" />
+                  <Menu.Item as="prev" icon>
+                    <Icon name="chevron left"><a href={ crossValInfo._links.first } /></Icon>
                   </Menu.Item>
-                  <Menu.Item as="a" icon>
-                    <Icon name="chevron right" />
+                  <Menu.Item as="next" icon>
+                    <Icon name="chevron right" ><a href={ crossValInfo._links.next } /></Icon>
                   </Menu.Item>
                 </Menu>
               </Table.HeaderCell>
