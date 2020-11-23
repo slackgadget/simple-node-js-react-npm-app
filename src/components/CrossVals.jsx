@@ -9,7 +9,7 @@ const CrossVals = () => {
   useEffect(() => {
     async function fetchCrossVals() {
       try {
-        let response = await fetch('http://localhost:8989/crossvals?page=' + currentPage + 'size=' + dataSet);
+        let response = await fetch(`http://localhost:8989/crossvals?page=${currentPage}size=${dataSet}`);
         response = await response.json();
         setCrossValInfo(response);
         // eslint-disable-next-line no-console
