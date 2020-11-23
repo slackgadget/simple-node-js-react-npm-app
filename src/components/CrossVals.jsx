@@ -43,7 +43,7 @@ const CrossVals = () => {
         </Header>
         <p>&nbsp;</p>
       </div>
-      <div>
+      <div style="width:800px;height:300px;overflow-x: scroll;">
         <Table compact striped>
           <Table.Header>
             <Table.Row>
@@ -75,7 +75,7 @@ const CrossVals = () => {
           <Table.Footer>
             <Table.Row>
               <Table.HeaderCell colSpan="7">
-                <Menu floated="right" pagination>
+                <Menu floated="left" pagination>
                   <Menu.Item as="a" icon>
                     <Icon name="chevron left" />
                   </Menu.Item>
