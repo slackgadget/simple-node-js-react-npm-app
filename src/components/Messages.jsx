@@ -72,7 +72,7 @@ const Messages = () => {
         My Messages
       </Header>
       {messageFetchFailed
-      && <Message error header="Failed to fetch messages.  Please verify the following:" list={possibleErrors} /> }
+      && <Message error header="No Message Service Running.  Please verify the following:" list={possibleErrors} /> }
       {!messages && !messageFetchFailed && <p>Fetching Messages..</p>}
       {messages
       && (
