@@ -4,9 +4,10 @@ import { Header, Icon, Menu, Table, Dimmer, Loader, Image, Segment } from 'seman
 const CrossVals = () => {
   const [crossValInfo, setCrossValInfo] = useState(null);
   const dataSet = 5;
+  const urlXvalWebservice = 'http://localhost:8989/crossvals?size='
 
-  function urlRequest() {
-    return 'http://localhost:8989/crossvals?size=' + dataSet;
+  function urlRequest(urlXvalWebservice, dataSet) {
+    return urlXvalWebservice + dataSet;
   }
 
   useEffect(() => {
@@ -25,7 +26,7 @@ const CrossVals = () => {
 
     fetchCrossVals();
   }, [crossValInfo, setCrossValInfo]);
-  
+
   if (!crossValInfo) {
     return (
       <Segment>
