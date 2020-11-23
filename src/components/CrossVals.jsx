@@ -61,7 +61,7 @@ const CrossVals = () => {
               /* eslint no-underscore-dangle: ["error", { "allow": ["_embedded"] }] */
               crossValInfo._embedded.crossvals.map((crossVal) => (
                 <Table.Row>
-                  <Table.Cell>{crossVal.errDesc}</Table.Cell>
+                  <Table.Cell>{crossVal.errMsg}</Table.Cell>
                   <Table.Cell>{crossVal.comboRuleset}</Table.Cell>
                   <Table.Cell>{crossVal.accountLabel}</Table.Cell>
                   <Table.Cell>{crossVal.checkColumn}</Table.Cell>
