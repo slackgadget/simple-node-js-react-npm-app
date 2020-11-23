@@ -4,16 +4,16 @@ import { Header, Icon, Menu, Table, Dimmer, Loader, Image, Segment } from 'seman
 const CrossVals = () => {
   const [crossValInfo, setCrossValInfo] = useState(null);
   const dataSet = 5;
-  const urlXvalWebservice = 'http://localhost:8989/crossvals?size='
+  const urlXvalWebservice = 'http://localhost:8989/crossvals?size=';
 
-  function urlRequest(urlXvalWebservice, dataSet) {
-    return urlXvalWebservice + dataSet;
+  function urlRequest(a, b) {
+    return a + b;
   }
 
   useEffect(() => {
     async function fetchCrossVals() {
       try {
-        let response = await fetch(urlRequest());
+        let response = await fetch(urlRequest(urlXvalWebservice, dataSet));
         response = await response.json();
         setCrossValInfo(response);
         // eslint-disable-next-line no-console
