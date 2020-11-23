@@ -36,9 +36,9 @@ const Navbar = () => {
             </Menu.Item>
           )}
           {authState.isAuthenticated && (
-            <Dropdown item text='Accounting Config'>
+            <Dropdown item text="Accounting Config">
               <Dropdown.Menu>
-                <Dropdown.Item icon='settings' text='View X Val Rules' href="/crossvals" />
+                <Dropdown.Item icon="settings" text="View X Val Rules" href="/crossvals" />
               </Dropdown.Menu>
             </Dropdown>
           )}
