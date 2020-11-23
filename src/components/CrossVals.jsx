@@ -76,7 +76,7 @@ const CrossVals = () => {
               <Table.HeaderCell>
                 Page:
                 {' '}
-                { crossValInfo._embedded.page.number }
+                { crossValInfo.page.number }
               </Table.HeaderCell>
               <Table.HeaderCell>
                 of:
