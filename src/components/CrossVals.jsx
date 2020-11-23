@@ -25,7 +25,7 @@ const CrossVals = () => {
     return (
       <Segment>
         <Dimmer active>
-          <Loader />
+          <Loader>Requested data .. Loading</Loader>
         </Dimmer>
         <Image src="https://react.semantic-ui.com/images/wireframe/short-paragraph.png" />
       </Segment>
@@ -44,7 +44,7 @@ const CrossVals = () => {
         <p>&nbsp;</p>
       </div>
       <div style={{ width: '1000px', height: '500px' }}>
-        <Table compact striped>
+        <Table compact striped >
           <Table.Header>
             <Table.Row>
               <Table.HeaderCell>Id</Table.HeaderCell>
@@ -56,7 +56,8 @@ const CrossVals = () => {
               <Table.HeaderCell>Match Value</Table.HeaderCell>
             </Table.Row>
           </Table.Header>
-          <Table.Body style={{ overflowX: 'scroll' }}>
+          <Table.Body>
+            <div style={{ overflowX: 'scroll' }}>
             {
               /* eslint no-underscore-dangle: ["error", { "allow": ["_embedded"] }] */
               crossValInfo._embedded.crossvals.map((crossVal) => (
@@ -71,6 +72,7 @@ const CrossVals = () => {
                 </Table.Row>
               ))
             }
+            </div>
           </Table.Body>
           <Table.Footer>
             <Table.Row>
