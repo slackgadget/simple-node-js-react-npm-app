@@ -7,7 +7,7 @@ const CrossVals = () => {
   useEffect(() => {
     async function fetchCrossVals() {
       try {
-        let response = await fetch('http://localhost:8989/crossvals');
+        let response = await fetch('http://localhost:8989/crossvals?size=10');
         response = await response.json();
         setCrossValInfo(response);
         // eslint-disable-next-line no-console
@@ -61,7 +61,7 @@ const CrossVals = () => {
               /* eslint no-underscore-dangle: ["error", { "allow": ["_embedded"] }] */
               crossValInfo._embedded.crossvals.map((crossVal) => (
                 <Table.Row>
-                  <Table.Cell>{crossVal.errMsg}</Table.Cell>
+                  <Table.Cell>{crossVal.Id}</Table.Cell>
                   <Table.Cell>{crossVal.comboRuleset}</Table.Cell>
                   <Table.Cell>{crossVal.accountLabel}</Table.Cell>
                   <Table.Cell>{crossVal.checkColumn}</Table.Cell>
