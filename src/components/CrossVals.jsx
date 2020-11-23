@@ -77,19 +77,10 @@ const CrossVals = () => {
               <Table.HeaderCell colSpan="7">
                 <Menu floated="left" pagination>
                   <Menu.Item as="prev" icon>
-                    { /* eslint no-underscore-dangle: ["error", { "allow": ["_links"] }] */
-                      <a href={crossValInfo._links.first}>
-                        <Icon name="chevron left"/>
-                      </a>
-                    }
+                    <Icon name="chevron left"/>
                   </Menu.Item>
                   <Menu.Item as="next" icon>
-                    {
-                      /* eslint no-underscore-dangle: ["error", { "allow": ["_links"] }] */
-                      <a href={crossValInfo._links.next}>
-                        <Icon name="chevron right"/>
-                      </a>
-                    }
+                    <Icon name="chevron right"/>
                   </Menu.Item>
                 </Menu>
               </Table.HeaderCell>
