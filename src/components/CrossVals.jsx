@@ -76,7 +76,7 @@ const CrossVals = () => {
               <Table.HeaderCell colSpan="2">
                 Page
                 {' '}
-                { crossValInfo.page.number+1 }
+                { crossValInfo.page.number + 1 }
                 {' '}
                 of
                 {' '}
