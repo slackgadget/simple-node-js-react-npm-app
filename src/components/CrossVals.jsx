@@ -74,10 +74,14 @@ const CrossVals = () => {
           <Table.Footer>
             <Table.Row>
               <Table.HeaderCell>
-                { crossValInfo._embedded.page }
+                Page:
+                {' '}
+                { crossValInfo._embedded.page.number }
               </Table.HeaderCell>
               <Table.HeaderCell>
-                { crossValInfo._embedded.totalPages }
+                of:
+                {' '}
+                { crossValInfo._embedded.page.totalPages }
               </Table.HeaderCell>
               <Table.HeaderCell colSpan="5">
                 <Menu floated="left" pagination>
