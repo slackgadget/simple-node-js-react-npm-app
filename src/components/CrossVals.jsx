@@ -43,7 +43,7 @@ const CrossVals = () => {
         </Header>
         <p>&nbsp;</p>
       </div>
-      <div style={{width: '800px', height: '300px', overflowX: 'scroll'}}>
+      <div style={{ width: '800px', height: '300px', overflowX: 'scroll' }}>
         <Table compact striped>
           <Table.Header>
             <Table.Row>
