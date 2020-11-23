@@ -73,6 +73,7 @@ const CrossVals = () => {
             }
           </Table.Body>
           <Table.Footer>
+            {
             <Table.Row>
               <Table.HeaderCell colSpan="7">
                 <Menu floated="left" pagination>
@@ -91,6 +92,7 @@ const CrossVals = () => {
                 </Menu>
               </Table.HeaderCell>
             </Table.Row>
+            }
           </Table.Footer>
         </Table>
       </div>
