@@ -5,6 +5,10 @@ const CrossVals = () => {
   const [crossValInfo, setCrossValInfo] = useState(null);
   const dataSet = 5;
 
+  function urlRequest() {
+    return 'http://localhost:8989/crossvals?size=' + dataSet;
+  }
+
   useEffect(() => {
     async function fetchCrossVals() {
       try {
@@ -21,11 +25,7 @@ const CrossVals = () => {
 
     fetchCrossVals();
   }, [crossValInfo, setCrossValInfo]);
-
-  function urlRequest() {
-    return 'http://localhost:8989/crossvals?size=' + dataSet;
-  }
-
+  
   if (!crossValInfo) {
     return (
       <Segment>
