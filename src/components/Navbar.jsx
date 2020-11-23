@@ -12,7 +12,7 @@
 
 import { useOktaAuth } from '@okta/okta-react';
 import React from 'react';
-import { Container, Icon, Image, Menu } from 'semantic-ui-react';
+import { Container, Icon, Image, Menu, Dropdown } from 'semantic-ui-react';
 
 const Navbar = () => {
   const { authState, authService } = useOktaAuth();
@@ -36,9 +36,11 @@ const Navbar = () => {
             </Menu.Item>
           )}
           {authState.isAuthenticated && (
-            <Menu.Item id="xvals-button" as="a" href="/crossvals">
-              View X Val Rules
-            </Menu.Item>
+            <Dropdown item text='Accounting Config'>
+              <Dropdown.Menu>
+                <Dropdown.Item icon='settings' text='View X Val Rules' href="/crossvals" />
+              </Dropdown.Menu>
+            </Dropdown>
           )}
           {authState.isAuthenticated
           && <Menu.Item id="profile-button" as="a" href="/profile">Profile</Menu.Item>}
