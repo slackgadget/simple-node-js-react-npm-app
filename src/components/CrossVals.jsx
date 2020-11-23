@@ -8,7 +8,7 @@ const CrossVals = () => {
   useEffect(() => {
     async function fetchCrossVals() {
       try {
-        let response = await fetch('http://localhost:8989/crossvals?size=' + dataSet);
+        let response = await fetch(urlRequest());
         response = await response.json();
         setCrossValInfo(response);
         // eslint-disable-next-line no-console
@@ -22,10 +22,8 @@ const CrossVals = () => {
     fetchCrossVals();
   }, [crossValInfo, setCrossValInfo]);
 
-  function urlRequest(){
-    // eslint-disable-next-line no-console
-    console.debug("test");
-    return "http://localhost:8989/crossvals?size=5"
+  function urlRequest() {
+    return 'http://localhost:8989/crossvals?size=' + dataSet;
   }
 
   if (!crossValInfo) {
