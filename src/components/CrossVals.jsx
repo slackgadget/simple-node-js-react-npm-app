@@ -43,7 +43,7 @@ const CrossVals = () => {
         </Header>
         <p>&nbsp;</p>
       </div>
-      <div style={{ width: '1000px', height: '500px', overflowX: 'scroll' }}>
+      <div style={{ width: '1000px', height: '500px' }}>
         <Table compact striped>
           <Table.Header>
             <Table.Row>
@@ -56,7 +56,7 @@ const CrossVals = () => {
               <Table.HeaderCell>Match Value</Table.HeaderCell>
             </Table.Row>
           </Table.Header>
-          <Table.Body>
+          <Table.Body style={{ overflowX: 'scroll' }}>
             {
               /* eslint no-underscore-dangle: ["error", { "allow": ["_embedded"] }] */
               crossValInfo._embedded.crossvals.map((crossVal) => (
