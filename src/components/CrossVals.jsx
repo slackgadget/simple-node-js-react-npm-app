@@ -3,11 +3,12 @@ import { Header, Icon, Menu, Table, Dimmer, Loader, Image, Segment } from 'seman
 
 const CrossVals = () => {
   const [crossValInfo, setCrossValInfo] = useState(null);
+  const dataSet = 5;
 
   useEffect(() => {
     async function fetchCrossVals() {
       try {
-        let response = await fetch('http://localhost:8989/crossvals?size=10');
+        let response = await fetch('http://localhost:8989/crossvals?size=' + dataSet);
         response = await response.json();
         setCrossValInfo(response);
         // eslint-disable-next-line no-console
@@ -20,6 +21,12 @@ const CrossVals = () => {
 
     fetchCrossVals();
   }, [crossValInfo, setCrossValInfo]);
+
+  function urlRequest(){
+    // eslint-disable-next-line no-console
+    console.debug("test");
+    return "http://localhost:8989/crossvals?size=5"
+  }
 
   if (!crossValInfo) {
     return (
