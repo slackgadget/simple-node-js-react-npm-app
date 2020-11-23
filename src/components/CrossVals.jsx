@@ -84,10 +84,12 @@ const CrossVals = () => {
                     }
                   </Menu.Item>
                   <Menu.Item as="next" icon>
+                    {
                       /* eslint no-underscore-dangle: ["error", { "allow": ["_links"] }] */
                       <a href={crossValInfo._links.next}>
                         <Icon name="chevron right"/>
                       </a>
+                    }
                   </Menu.Item>
                 </Menu>
               </Table.HeaderCell>
