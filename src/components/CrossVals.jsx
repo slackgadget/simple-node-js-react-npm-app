@@ -58,7 +58,6 @@ const CrossVals = () => {
           </Table.Header>
           <Table.Body>
             {
-              /* eslint no-underscore-dangle: ["error", { "allow": ["_embedded"] }] */
               crossValInfo._embedded.crossvals.map((crossVal) => (
                 <Table.Row>
                   <Table.Cell>{crossVal.crossval}</Table.Cell>
@@ -74,7 +73,13 @@ const CrossVals = () => {
           </Table.Body>
           <Table.Footer>
             <Table.Row>
-              <Table.HeaderCell colSpan="7">
+              <Table.HeaderCell>
+                { crossValInfo._embedded.page }
+              </Table.HeaderCell>
+              <Table.HeaderCell>
+                { crossValInfo._embedded.totalPages }
+              </Table.HeaderCell>
+              <Table.HeaderCell colSpan="5">
                 <Menu floated="left" pagination>
                   <Menu.Item as="prev" icon>
                     <Icon name="chevron left" />
@@ -83,6 +88,7 @@ const CrossVals = () => {
                     <Icon name="chevron right" />
                   </Menu.Item>
                 </Menu>
+
               </Table.HeaderCell>
             </Table.Row>
           </Table.Footer>

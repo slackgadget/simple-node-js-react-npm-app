@@ -8,6 +8,7 @@
     "ecmaVersion": 2018
   },
   "rules": {
+    "no-underscore-dangle":"off",
     "strict": "off",
     "max-len": [
       "error",

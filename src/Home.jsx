@@ -59,14 +59,17 @@ const Home = () => {
               This project demonstrates the use of consuming java Spring Boot REST Web Services through a React Driven UI.
               Additionally the project is configured to contain it&lsquo;s own versioned build instructions through Jenkins
               Pipelined Builds.
-
+            </p>
+            <p>
               The UI showcases the use of React Menus, Tables, Paging, Loading Dialogue, UI Styling and Icon graphics from semantic-UI
               As well as MySQL Database Integration, Consumption of REST Web Services,  User Profiles
-
+            </p>
+            <p>
               For the purposes of this demo you can see implemented service (Cross Validation Rules Lookup) and
               unimplemented services (Messaging Service) cohabiting within the UI. The UI is fault tolerant as a result of the
               Micro-Service architecture.
-
+            </p>
+            <p>
               Additionally this Demo displays the use a federated Authentication platform, Okta, which handles the Authentication
               and Role Security of the Web Application through configuration.
             </p>
