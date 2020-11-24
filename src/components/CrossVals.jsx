@@ -40,7 +40,7 @@ const CrossVals = () => {
 
       fetchCrossVals();
     }, [crossValInfo, setCrossValInfo]);
-  };
+  }
 
   if (!crossValInfo) {
     return (
