@@ -9,6 +9,7 @@ const CrossVals = () => {
 
   useEffect(() => {
     async function fetchCrossVals() {
+      if (crossValInfo)
       try {
         let response = await fetch(crossValServiceURL);
         response = await response.json();
@@ -18,6 +19,7 @@ const CrossVals = () => {
       } catch (e) {
         // eslint-disable-next-line no-console
         console.error(e.message);
+        console.log(response);
         // eslint-disable-next-line no-console
         console.log(crossValServiceURL);
       }
