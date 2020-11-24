@@ -19,7 +19,7 @@ const CrossVals = () => {
         // eslint-disable-next-line no-console
         console.error(e.message);
         // eslint-disable-next-line no-console
-        console.log(url);
+        console.log(crossValServiceURL);
       }
     }
     fetchCrossVals();
