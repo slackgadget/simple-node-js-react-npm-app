@@ -92,11 +92,13 @@ const CrossVals = () => {
                 <Menu floated="left" pagination>
                   <Menu.Item
                     as="a"
-                    onClick={() => {
-                      if (!crossValInfo._links.first.href) {
-                        setCrossValServiceURL(crossValInfo._links.first.href);
+                    onClick={() =>
+                      {
+                        if (!crossValInfo._links.first.href) {
+                          setCrossValServiceURL(crossValInfo._links.first.href);
+                        }
                       }
-                    }}>
+                    }>
                     First
                   </Menu.Item>
                   <Menu.Item as="a" onClick={() => setCrossValServiceURL(crossValInfo._links.prev.href)} icon>
