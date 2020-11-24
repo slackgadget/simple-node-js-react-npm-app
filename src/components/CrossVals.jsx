@@ -8,9 +8,9 @@ const CrossVals = () => {
   const [crossValServiceURL, setCrossValServiceURL] = useState(`http://localhost:8989/crossvals?page=${currentPage}&size=${dataSet}`);
 
   useEffect(() => {
-    async function fetchCrossVals() {
+    async function fetchCrossVals(url) {
       try {
-        let response = await fetch(crossValServiceURL);
+        let response = await fetch(url);
         response = await response.json();
         setCrossValInfo(response);
         // eslint-disable-next-line no-console
@@ -20,8 +20,7 @@ const CrossVals = () => {
         console.error(e.message);
       }
     }
-
-    fetchCrossVals();
+    fetchCrossVals(crossValServiceURL);
   }, [crossValInfo, setCrossValInfo]);
 
   if (!crossValInfo) {
@@ -87,16 +86,16 @@ const CrossVals = () => {
               </Table.HeaderCell>
               <Table.HeaderCell colSpan="5">
                 <Menu floated="left" pagination>
-                  <Menu.Item as="first" onClick={setCrossValServiceURL(crossValInfo._links.first)}>
+                  <Menu.Item as="first" onClick={() => setCrossValServiceURL(crossValInfo._links.first)}>
                     Frist
                   </Menu.Item>
-                  <Menu.Item as="prev" onClick={setCrossValServiceURL(crossValInfo._links.prev)} icon>
+                  <Menu.Item as="prev" onClick={() => setCrossValServiceURL(crossValInfo._links.prev)} icon>
                     <Icon name="chevron left" />
                   </Menu.Item>
-                  <Menu.Item as="next" onClick={setCrossValServiceURL(crossValInfo._links.next)} icon>
+                  <Menu.Item as="next" onClick={() => setCrossValServiceURL(crossValInfo._links.next)} icon>
                     <Icon name="chevron right" />
                   </Menu.Item>
-                  <Menu.Item as="last" onClick={setCrossValServiceURL(crossValInfo._links.last)}>
+                  <Menu.Item as="last" onClick={() => setCrossValServiceURL(crossValInfo._links.last)}>
                     Last
                   </Menu.Item>
                 </Menu>
