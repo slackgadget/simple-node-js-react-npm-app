@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
 import { Header, Icon, Menu, Table, Dimmer, Loader, Image, Segment } from 'semantic-ui-react';
 
 const CrossVals = () => {
@@ -41,8 +40,7 @@ const CrossVals = () => {
 
       fetchCrossVals();
     }, [crossValInfo, setCrossValInfo]);
-    
-  }
+  };
 
   if (!crossValInfo) {
     return (
