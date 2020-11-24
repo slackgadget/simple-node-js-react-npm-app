@@ -18,6 +18,7 @@ const CrossVals = () => {
       } catch (e) {
         // eslint-disable-next-line no-console
         console.error(e.message);
+        console.log("Requested url was >>>>>>>>> " + url);
       }
     }
     fetchCrossVals(crossValServiceURL);
@@ -87,7 +88,7 @@ const CrossVals = () => {
               <Table.HeaderCell colSpan="5">
                 <Menu floated="left" pagination>
                   <Menu.Item as="first" onClick={() => setCrossValServiceURL(crossValInfo._links.first)}>
-                    Frist
+                    First
                   </Menu.Item>
                   <Menu.Item as="prev" onClick={() => setCrossValServiceURL(crossValInfo._links.prev)} icon>
                     <Icon name="chevron left" />
