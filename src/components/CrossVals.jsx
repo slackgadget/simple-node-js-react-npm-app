@@ -92,8 +92,7 @@ const CrossVals = () => {
                 <Menu floated="left" pagination>
                   <Menu.Item
                     as="a"
-                    onClick={() =>
-                    {
+                    onClick={() => {
                       if (!crossValInfo._links.first.href) {
                         setCrossValServiceURL(crossValInfo._links.first.href);
                       }
