@@ -18,6 +18,7 @@ const CrossVals = () => {
       } catch (e) {
         // eslint-disable-next-line no-console
         console.error(e.message);
+        // eslint-disable-next-line no-console
         console.log(`Requested url was >>>>>>>>> ${url}`);
       }
     }
