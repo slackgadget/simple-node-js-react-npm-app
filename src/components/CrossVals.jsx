@@ -93,20 +93,40 @@ const CrossVals = () => {
                   <Menu.Item
                     as="a"
                     onClick={() => {
-                      if (!crossValInfo._links.first.href) {
+                      if (!crossValInfo._links.first) {
                         setCrossValServiceURL(crossValInfo._links.first.href);
                       }
                     }}
                   >
                     First
                   </Menu.Item>
-                  <Menu.Item as="a" onClick={() => setCrossValServiceURL(crossValInfo._links.prev.href)} icon>
+                  <Menu.Item
+                    as="a"
+                    onClick={() => {
+                      if (!crossValInfo._links.prev){
+                        setCrossValServiceURL(crossValInfo._links.prev.href);
+                      }
+                    }}
+                    icon>
                     <Icon name="chevron left" />
                   </Menu.Item>
-                  <Menu.Item as="a" onClick={() => setCrossValServiceURL(crossValInfo._links.next.href)} icon>
+                  <Menu.Item
+                    as="a"
+                    onClick={() => {
+                      if (crossValInfo._links.next){
+                        setCrossValServiceURL(crossValInfo._links.next.href);
+                      }
+                    }}
+                    icon>
                     <Icon name="chevron right" />
                   </Menu.Item>
-                  <Menu.Item as="a" onClick={() => setCrossValServiceURL(crossValInfo._links.last.href)}>
+                  <Menu.Item
+                    as="a"
+                    onClick={() => {
+                      if(!crossValInfo._links.last){
+                        setCrossValServiceURL(crossValInfo._links.last.href)
+                      }
+                    }}>
                     Last
                   </Menu.Item>
                 </Menu>
