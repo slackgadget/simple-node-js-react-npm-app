@@ -5,7 +5,7 @@ const CrossVals = () => {
   const [crossValInfo, setCrossValInfo] = useState(null);
   const dataSet = 5;
   const currentPage = 0;
-  const [crossValServiceURL, setCrossValServiceURL] = useState('http://localhost:8989/crossvals?page=' + currentPage + '&size=' + dataSet);
+  const [crossValServiceURL, setCrossValServiceURL] = useState(`http://localhost:8989/crossvals?page=${currentPage}&size=${dataSet}`);
 
   useEffect(() => {
     async function fetchCrossVals() {
