@@ -8,9 +8,9 @@ const CrossVals = () => {
   const [crossValServiceURL, setCrossValServiceURL] = useState(`http://localhost:8989/crossvals?page=${currentPage}&size=${dataSet}`);
 
   useEffect(() => {
-    async function fetchCrossVals(url) {
+    async function fetchCrossVals() {
       try {
-        let response = await fetch(url);
+        let response = await fetch(crossValServiceURL);
         response = await response.json();
         setCrossValInfo(response);
         // eslint-disable-next-line no-console
@@ -19,10 +19,10 @@ const CrossVals = () => {
         // eslint-disable-next-line no-console
         console.error(e.message);
         // eslint-disable-next-line no-console
-        console.log(`Requested url was >>>>>>>>> ${url}`);
+        console.log(url);
       }
     }
-    fetchCrossVals(crossValServiceURL);
+    fetchCrossVals();
   }, [crossValInfo, setCrossValInfo]);
 
   if (!crossValInfo) {
