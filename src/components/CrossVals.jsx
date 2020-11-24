@@ -42,7 +42,7 @@ const CrossVals = () => {
       fetchCrossVals();
     }, [crossValInfo, setCrossValInfo]);
 
-    ReactDOM.render(CrossVals, document.getElementById('root'));
+    ReactDOM.render(document.getElementById('datatable'), document.getElementById('root'));
   }
 
   if (!crossValInfo) {
