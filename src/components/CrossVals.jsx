@@ -21,7 +21,7 @@ const CrossVals = () => {
       }
     }
     fetchCrossVals();
-  }, [crossValInfo, setCrossValInfo]);
+  }, []);
 
   if (!crossValInfo) {
     return (
@@ -89,8 +89,6 @@ const CrossVals = () => {
                   <Menu.Item
                     as="a"
                     onClick={() => {
-                      // eslint-disable-next-line no-console
-                      console.log(crossValInfo._links.first);
                       if (crossValInfo._links.first != null) {
                         setCrossValServiceURL(crossValInfo._links.first.href);
                       }
@@ -101,8 +99,6 @@ const CrossVals = () => {
                   <Menu.Item
                     as="a"
                     onClick={() => {
-                      // eslint-disable-next-line no-console
-                      console.log(crossValInfo._links.prev);
                       if (crossValInfo._links.prev != null) {
                         setCrossValServiceURL(crossValInfo._links.prev.href);
                       }
@@ -114,8 +110,6 @@ const CrossVals = () => {
                   <Menu.Item
                     as="a"
                     onClick={() => {
-                      // eslint-disable-next-line no-console
-                      console.log(crossValInfo._links.next);
                       if (crossValInfo._links.next != null) {
                         setCrossValServiceURL(crossValInfo._links.next.href);
                       }
@@ -127,8 +121,6 @@ const CrossVals = () => {
                   <Menu.Item
                     as="a"
                     onClick={() => {
-                      // eslint-disable-next-line no-console
-                      console.log(crossValInfo._links.last);
                       if (crossValInfo._links.last != null) {
                         setCrossValServiceURL(crossValInfo._links.last.href);
                       }
