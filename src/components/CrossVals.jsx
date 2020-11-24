@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
 import { Header, Icon, Menu, Table, Dimmer, Loader, Image, Segment } from 'semantic-ui-react';
 
 const CrossVals = () => {
@@ -109,16 +110,16 @@ const CrossVals = () => {
               </Table.HeaderCell>
               <Table.HeaderCell colSpan="5">
                 <Menu floated="left" pagination>
-                  <Menu.Item as="first" onClick={setUrl(crossValInfo._links.first)}>
+                  <Menu.Item as="first" onClick={fetchData(crossValInfo._links.first)}>
                     Frist
                   </Menu.Item>
-                  <Menu.Item as="prev" onClick={setUrl(crossValInfo._links.prev)} icon>
+                  <Menu.Item as="prev" onClick={fetchData(crossValInfo._links.prev)} icon>
                     <Icon name="chevron left" />
                   </Menu.Item>
-                  <Menu.Item as="next" onClick={setUrl(crossValInfo._links.next)} icon>
+                  <Menu.Item as="next" onClick={fetchData(crossValInfo._links.next)} icon>
                     <Icon name="chevron right" />
                   </Menu.Item>
-                  <Menu.Item as="last" onClick={setUrl(crossValInfo._links.last)}>
+                  <Menu.Item as="last" onClick={fetchData(crossValInfo._links.last)}>
                     Last
                   </Menu.Item>
                 </Menu>
