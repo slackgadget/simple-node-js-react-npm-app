@@ -89,7 +89,9 @@ const CrossVals = () => {
                   <Menu.Item
                     as="a"
                     onClick={() => {
-                      setCrossValServiceURL(crossValInfo._links.first.href);
+                      if (crossValInfo._links.first != null) {
+                        setCrossValServiceURL(crossValInfo._links.first.href);
+                      }
                     }}
                   >
                     First
@@ -97,7 +99,9 @@ const CrossVals = () => {
                   <Menu.Item
                     as="a"
                     onClick={() => {
-                      setCrossValServiceURL(crossValInfo._links.prev.href);
+                      if (crossValInfo._links.prev != null) {
+                        setCrossValServiceURL(crossValInfo._links.prev.href);
+                      }
                     }}
                     icon
                   >
@@ -106,7 +110,9 @@ const CrossVals = () => {
                   <Menu.Item
                     as="a"
                     onClick={() => {
-                      setCrossValServiceURL(crossValInfo._links.next.href);
+                      if (crossValInfo._links.prev != null) {
+                        setCrossValServiceURL(crossValInfo._links.prev);
+                      }
                     }}
                     icon
                   >
@@ -115,7 +121,7 @@ const CrossVals = () => {
                   <Menu.Item
                     as="a"
                     onClick={() => {
-                      if (!crossValInfo._links.last) {
+                      if (crossValInfo._links.last != null) {
                         setCrossValServiceURL(crossValInfo._links.last.href);
                       }
                     }}
