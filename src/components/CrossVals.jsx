@@ -42,9 +42,7 @@ const CrossVals = () => {
       fetchCrossVals();
     }, [crossValInfo, setCrossValInfo]);
 
-    ReactDOM.render(CrossVals,
-      document.getElementById('root')
-    );
+    ReactDOM.render(CrossVals, document.getElementById('root'));
   }
 
   if (!crossValInfo) {
