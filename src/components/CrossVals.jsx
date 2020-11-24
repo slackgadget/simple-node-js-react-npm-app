@@ -5,11 +5,12 @@ const CrossVals = () => {
   const [crossValInfo, setCrossValInfo] = useState(null);
   const dataSet = 5;
   const currentPage = 0;
+  const [crossValServiceURL, setCrossValServiceURL] = useState("http://localhost:8989/crossvals?page="+currentPage+"&size="+dataSet);
 
   useEffect(() => {
     async function fetchCrossVals() {
       try {
-        let response = await fetch(`http://localhost:8989/crossvals?page=${currentPage}&size=${dataSet}`);
+        let response = await fetch(crossValServiceURL);
         response = await response.json();
         setCrossValInfo(response);
         // eslint-disable-next-line no-console
@@ -22,25 +23,6 @@ const CrossVals = () => {
 
     fetchCrossVals();
   }, [crossValInfo, setCrossValInfo]);
-
-  function fetchData(newURL) {
-    useEffect(() => {
-      async function fetchCrossVals() {
-        try {
-          let response = await fetch(`${newURL}`);
-          response = await response.json();
-          setCrossValInfo(response);
-          // eslint-disable-next-line no-console
-          console.log(response);
-        } catch (e) {
-          // eslint-disable-next-line no-console
-          console.error(e.message);
-        }
-      }
-
-      fetchCrossVals();
-    }, [crossValInfo, setCrossValInfo]);
-  }
 
   if (!crossValInfo) {
     return (
@@ -105,20 +87,19 @@ const CrossVals = () => {
               </Table.HeaderCell>
               <Table.HeaderCell colSpan="5">
                 <Menu floated="left" pagination>
-                  <Menu.Item as="first" onClick={fetchData(crossValInfo._links.first)}>
+                  <Menu.Item as="first" onClick={setCrossValServiceURL(crossValInfo._links.first)}>
                     Frist
                   </Menu.Item>
-                  <Menu.Item as="prev" onClick={fetchData(crossValInfo._links.prev)} icon>
+                  <Menu.Item as="prev" onClick={setCrossValServiceURL(crossValInfo._links.prev)} icon>
                     <Icon name="chevron left" />
                   </Menu.Item>
-                  <Menu.Item as="next" onClick={fetchData(crossValInfo._links.next)} icon>
+                  <Menu.Item as="next" onClick={setCrossValServiceURL(crossValInfo._links.next)} icon>
                     <Icon name="chevron right" />
                   </Menu.Item>
-                  <Menu.Item as="last" onClick={fetchData(crossValInfo._links.last)}>
+                  <Menu.Item as="last" onClick={setCrossValServiceURL(crossValInfo._links.last)}>
                     Last
                   </Menu.Item>
                 </Menu>
-
               </Table.HeaderCell>
             </Table.Row>
           </Table.Footer>
