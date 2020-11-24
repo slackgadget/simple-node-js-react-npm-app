@@ -8,10 +8,10 @@ const CrossVals = () => {
   const [crossValServiceURL, setCrossValServiceURL] = useState(`http://localhost:8989/crossvals?page=${currentPage}&size=${dataSet}`);
 
   useEffect(() => {
-    function fetchCrossVals() {
+    async function fetchCrossVals() {
       try {
-        let response = fetch(crossValServiceURL);
-        response = response.json();
+        let response = await fetch(crossValServiceURL);
+        response = await response.json();
         setCrossValInfo(response);
       } catch (e) {
         // eslint-disable-next-line no-console
