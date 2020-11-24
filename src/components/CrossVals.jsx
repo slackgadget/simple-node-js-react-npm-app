@@ -88,16 +88,16 @@ const CrossVals = () => {
               </Table.HeaderCell>
               <Table.HeaderCell colSpan="5">
                 <Menu floated="left" pagination>
-                  <Menu.Item as="first" onClick={() => setCrossValServiceURL(crossValInfo._links.first)}>
+                  <Menu.Item as="a" onClick={() => setCrossValServiceURL(crossValInfo._links.first)}>
                     First
                   </Menu.Item>
-                  <Menu.Item as="prev" onClick={() => setCrossValServiceURL(crossValInfo._links.prev)} icon>
+                  <Menu.Item as="a" onClick={() => setCrossValServiceURL(crossValInfo._links.prev)} icon>
                     <Icon name="chevron left" />
                   </Menu.Item>
-                  <Menu.Item as="next" onClick={() => setCrossValServiceURL(crossValInfo._links.next)} icon>
+                  <Menu.Item as="a" onClick={() => setCrossValServiceURL(crossValInfo._links.next)} icon>
                     <Icon name="chevron right" />
                   </Menu.Item>
-                  <Menu.Item as="last" onClick={() => setCrossValServiceURL(crossValInfo._links.last)}>
+                  <Menu.Item as="a" onClick={() => setCrossValServiceURL(crossValInfo._links.last)}>
                     Last
                   </Menu.Item>
                 </Menu>
