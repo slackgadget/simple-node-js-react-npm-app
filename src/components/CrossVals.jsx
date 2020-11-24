@@ -18,10 +18,6 @@ const CrossVals = () => {
       } catch (e) {
         // eslint-disable-next-line no-console
         console.error(e.message);
-        // eslint-disable-next-line no-console
-        console.log(crossValInfo);
-        // eslint-disable-next-line no-console
-        console.log(crossValServiceURL);
       }
     }
     fetchCrossVals();
@@ -93,9 +89,7 @@ const CrossVals = () => {
                   <Menu.Item
                     as="a"
                     onClick={() => {
-                      if (!crossValInfo._links.first) {
-                        setCrossValServiceURL(crossValInfo._links.first.href);
-                      }
+                      setCrossValServiceURL(crossValInfo._links.first.href);
                     }}
                   >
                     First
@@ -103,9 +97,7 @@ const CrossVals = () => {
                   <Menu.Item
                     as="a"
                     onClick={() => {
-                      if (!crossValInfo._links.prev) {
-                        setCrossValServiceURL(crossValInfo._links.prev.href);
-                      }
+                      setCrossValServiceURL(crossValInfo._links.prev.href);
                     }}
                     icon
                   >
@@ -114,9 +106,7 @@ const CrossVals = () => {
                   <Menu.Item
                     as="a"
                     onClick={() => {
-                      if (crossValInfo._links.next) {
-                        setCrossValServiceURL(crossValInfo._links.next.href);
-                      }
+                      setCrossValServiceURL(crossValInfo._links.next.href);
                     }}
                     icon
                   >
