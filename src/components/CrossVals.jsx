@@ -24,7 +24,7 @@ const CrossVals = () => {
     fetchCrossVals();
   }, [crossValInfo, setCrossValInfo]);
 
-  function fetchData(newURL){
+  function fetchData(newURL) {
     useEffect(() => {
       async function fetchCrossVals() {
         try {
@@ -42,8 +42,8 @@ const CrossVals = () => {
       fetchCrossVals();
     }, [crossValInfo, setCrossValInfo]);
 
-    ReactDOM.render(
-      document.getElementById('datatable')
+    ReactDOM.render(CrossVals,
+      document.getElementById('root')
     );
   }
 
