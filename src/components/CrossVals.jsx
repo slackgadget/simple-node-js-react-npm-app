@@ -9,19 +9,20 @@ const CrossVals = () => {
 
   useEffect(() => {
     async function fetchCrossVals() {
-      if (crossValInfo)
-      try {
-        let response = await fetch(crossValServiceURL);
-        response = await response.json();
-        setCrossValInfo(response);
-        // eslint-disable-next-line no-console
-        console.log(response);
-      } catch (e) {
-        // eslint-disable-next-line no-console
-        console.error(e.message);
-        console.log(response);
-        // eslint-disable-next-line no-console
-        console.log(crossValServiceURL);
+      if (crossValInfo == null) {
+        try {
+          let response = await fetch(crossValServiceURL);
+          response = await response.json();
+          setCrossValInfo(response);
+          // eslint-disable-next-line no-console
+          console.log(response);
+        } catch (e) {
+          // eslint-disable-next-line no-console
+          console.error(e.message);
+          console.log(response);
+          // eslint-disable-next-line no-console
+          console.log(crossValServiceURL);
+        }
       }
     }
     fetchCrossVals();
