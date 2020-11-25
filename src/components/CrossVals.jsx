@@ -20,7 +20,7 @@ const CrossVals = () => {
 
   useEffect(() => {
     fetchCrossVals();
-  }, [crossValInfo]);
+  }, [crossValServiceURL]);
 
   if (!crossValInfo) {
     return (
