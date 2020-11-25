@@ -7,19 +7,21 @@ const CrossVals = () => {
   const currentPage = 0;
   const [crossValServiceURL, setCrossValServiceURL] = useState(`http://localhost:8989/crossvals?page=${currentPage}&size=${dataSet}`);
 
-  useEffect(() => {
-    async function fetchCrossVals() {
-      try {
-        let response = await fetch(crossValServiceURL);
-        response = await response.json();
-        setCrossValInfo(response);
-      } catch (e) {
-        // eslint-disable-next-line no-console
-        console.error(e.message);
-      }
+
+  const fetchCrossVals = async () => {
+    try {
+      let response = await fetch(crossValServiceURL);
+      response = await response.json();
+      setCrossValInfo(response);
+    } catch (e) {
+      // eslint-disable-next-line no-console
+      console.error(e.message);
     }
+  }
+  useEffect(() => {
+
     fetchCrossVals();
-  }, []);
+  }, [crossValInfo]);
 
   if (!crossValInfo) {
     return (
