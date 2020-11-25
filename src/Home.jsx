@@ -53,7 +53,6 @@ const Home = () => {
             <p>
               Welcome back,&nbsp;
               {userInfo.name}
-              !
             </p>
             <p>
               This project demonstrates the use of consuming java Spring Boot REST Web Services through a React Driven UI.
