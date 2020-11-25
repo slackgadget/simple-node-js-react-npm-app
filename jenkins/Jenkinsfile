@@ -1,8 +1,11 @@
 pipeline {
     agent any
-    triggers { pollSCM('* * * *') }
+
+
     environment {
         CI = 'true'
+        CLIENT_ID = '0oams1il08SC8D5UX5d5'
+        ISSUER = 'https://dev-9213540.okta.com/oauth2/default'
     }
     stages {
         stage('Build') {
@@ -18,11 +21,10 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh 'echo "delivery will take place here.."'
-                //sh './jenkins/scripts/deliver.sh'
-                //input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                //sh './jenkins/scripts/kill.sh'
-                sh 'echo "No delivery required"; exit 0'
+                sh 'echo "Starting Delivery to local Docker.."'
+                sh './jenkins/scripts/deliver.sh'
+
+                sh 'echo "Delivery Complete."; exit 0'
             }
         }
     }

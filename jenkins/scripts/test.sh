@@ -3,7 +3,7 @@
 'echo ************** current TEST  path is *******************'
 echo $PATH
 'echo *********************************************************'
-PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/christopherwebster/springsource/apache-maven-3.0.4/bin:/usr/local/git/bin:/usr/local/bin/npm:/Users/christopherwebster/Dev/google-cloud-sdk/bin:
+PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/local/bin/npm:
 node -v
 
 
@@ -17,8 +17,8 @@ echo 'installing this dependency, it would typically be done so using this'
 echo 'flag. For a comprehensive explanation about "devDependencies", see'
 echo 'https://stackoverflow.com/questions/18875674/whats-the-difference-between-dependencies-devdependencies-and-peerdependencies.'
 set -x
-npm install --save-dev cross-env
-npm update
+#npm install --save-dev cross-env
+#npm update
 set +x
 
 echo 'The following "npm" command tests that your simple Node.js/React'
